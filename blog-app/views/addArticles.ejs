@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add New Article</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <span><a href="/">Home</a></span>
+        <span
+          ><a href="/articles">Articles List</a> |
+          <a href="/articles/new/article">Add Article</a></span
+        >
+      </nav>
+      <h1>Add New Article</h1>
+    </header>
+    <div style='padding: 16px; color: red; font-size: 24px; ' >
+        <%= msg %>
+    </div>
+    <div class="container">
+      <form action="/articles" method="POST">
+        <div class="form-control">
+          <label for="article">Article</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter Article"
+            required
+          />
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            placeholder="Enter Description"
+            required
+          ></textarea>
+          <label for="tags">Tags</label>
+          <input
+            type="text"
+            name="tags"
+            id="tags"
+            placeholder="Enter Tags"
+            required
+          />
+          <input type="submit" value="Add Article" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

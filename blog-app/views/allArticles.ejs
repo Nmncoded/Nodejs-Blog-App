@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles List</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <span><a href="/">BlogApp</a></span>
+        <span
+          ><a href="/articles">Articles List</a>
+          <a href="/articles/new/article">Add Article</a>
+          <a href="/logout">Logout</a>
+          </span
+        >
+      </nav>
+      <h1>Articles List</h1>
+    </header>
+    <main>
+      <% articles.forEach(article => { %>
+      <section>
+        <div class="list">
+          <span><%= article.title %></span>
+          <span
+            ><a href="/articles/<%= article.slug %>">
+              <button class="details">Details</button>
+            </a></span
+          >
+        </div>
+      </section>
+      <% }) %>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= comment.content %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <span><a href="/">BlogApp</a></span>
+        <span
+          ><a href="/articles">Articles List</a>
+          <a href="/articles/new/article">Add Article</a>
+          <a href="/logout">Logout</a></span
+        >
+      </nav>
+      <h1>Update Comment</h1>
+    </header>
+    <div class="container">
+      <form
+        action="/comments/<%= comment._id %>"
+        method="POST"
+        class="comment-box"
+      >
+        <textarea name="content" rows="3" placeholder="Add Comment...">
+           <%= comment.content %> </textarea
+        >
+        <div><button type="submit">Update Comment</button></div>
+      </form>
+    </div>
+  </body>
+</html>

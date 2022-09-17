@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% if(welcome){ %>
+      <h2><%= welcome %></h2>
+    <%}%>
+    <div>
+      <button>
+        <a href="/login">Login</a>
+      </button>
+      <button>
+        <a href="/register">Register</a>
+      </button>
+      <% if(welcome){ %>
+        <button>
+          <a href="/logout">Logout</a>
+        </button>
+      <%}%>
+    </div>
+    <br>
+    <div>
+      <button>
+        <a href="/auth/github">login with github</a>
+      </button>
+      <button>
+        <a href="/auth/google">login with google</a>
+      </button>
+    </div>
+    <br>
+    <div>
+      <button>
+        <a href="/articles">Go to articles section</a>
+      </button>
+    </div>
+  </body>
+</html>

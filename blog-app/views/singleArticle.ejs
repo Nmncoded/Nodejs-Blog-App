@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title><%= article.title %></title> -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <span><a href="/">BlogApp</a></span>
+        <span
+          ><a href="/articles">Articles List</a> |
+          <a href="/articles/new/article">Add Article</a>
+          <a href="/logout">Logout</a></span
+        >
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="card_body">
+          <%if(msg){ %>
+            <h2 style="color: red; text-align: center; " ><%= msg %></h2>
+            <%}%>
+          <h2 class="card_title">author: <%= article.author.name %></h2>
+          <h2 class="card_title"><%= article.title %></h2>
+          <p><%= article.description %></p>
+          <a href="/articles/<%= article._id %>/increment"
+            ><i class="fa fa-plus"></i
+          ></a>
+          <span class="likes"><%= article.likes.length %> likes</span>
+          <a href="/articles/<%= article._id %>/edit" class="read_more">Edit</a>
+          <a href="/articles/<%= article._id %>/delete" class="read_more"
+            >Delete</a
+          >
+        </div>
+        <form
+          action="/articles/<%= article._id %>/comments"
+          method="POST"
+          class="comment-box"
+        >
+          <textarea
+            name="content"
+            rows="3"
+            placeholder="Add Comment..."
+          ></textarea>
+          <input type="submit" value="Add Comment" />
+        </form>
+        <h3>Comments</h3>
+        <hr />
+        <% article.comments.forEach(comment =>{ %>
+        <div>
+          <span><%= comment.content %></span>
+          <span><a href="/comments/<%= comment.id %>/edit">Edit</a></span>
+          <span><a href="/comments/<%= comment.id %>/delete">Delete</a></span>
+          <span
+            ><a href="/comments/<%= comment.id %>/likes"
+              ><i class="fa-solid fa-thumbs-up"></i> <%= comment.likes.length %></a
+            ></span
+          >
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

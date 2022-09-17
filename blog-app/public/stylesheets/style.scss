@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+header {
+  width: 100%;
+  color: coral;
+}
+header a {
+  color: black;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 20px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(40, 116, 240);
+  padding: 1rem;
+}
+.btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+form {
+  width: 600px;
+  margin: 0 auto;
+}
+textarea {
+  width: 100%;
+}
+label {
+  font-size: 1.3rem;
+}
+.btn-index {
+  font-size: 20px;
+  background-color: aquamarine;
+  border: 1px dashed red;
+  padding: 0.8rem 1rem;
+}
+.btn-index a:hover {
+  text-decoration: underline;
+}
+
+.comment-box {
+  width: 400px;
+  margin-left: 0;
+  margin-top: 1rem;
+}
+
+.card {
+  border-bottom: 2px dotted black;
+  padding: 1rem;
+}
+.card_title {
+  text-align: left;
+  font-size: 25px;
+}
+.card_body p {
+  text-align: left;
+  line-height: 25px;
+  font-size: 17px;
+}
+i.fa {
+  font-size: 20px;
+}
+.likes {
+  font-size: 18px;
+}
+a.read_more {
+  background-color: rgb(90, 53, 7);
+  padding: 10px 5px;
+  border-radius: 15px;
+  color: white;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+input {
+  width: 100%;
+  padding: 10px 2px;
+  margin: 0.5rem 0;
+}
+input[type="submit"] {
+  background-color: yellowgreen;
+  color: black;
+  border: 0;
+  font-size: 15px;
+}
+
+section {
+  margin: 10px 0;
+  padding: 0.5rem;
+  background-color: rgb(241, 243, 246);
+}
+section span {
+  margin-left: 0.5rem;
+  font-size: 25px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.details {
+  padding: 0.3rem 0.9rem;
+  background-color: rgb(109, 161, 243);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.details:hover {
+  background-color: rgb(40, 116, 240);
+}
